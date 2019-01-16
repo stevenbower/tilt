@@ -13,7 +13,7 @@ If you use Tilt to build your own Docker image and that image appears in your He
 ```python
 docker_build("companyname/service", ".")
 yml = helm('path/to/chart') # the resulting yaml uses the companyname/service image
-k8s_resource(yml)
+k8s_resource("service", yaml=yml)
 ```
 
 `helm` could also be implemented as a `local` command if you require further customization:
